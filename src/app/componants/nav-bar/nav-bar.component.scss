@@ -1,0 +1,32 @@
+.navbar {
+  background: #24301b;
+  background: -webkit-linear-gradient(59deg, #151f25, #24301b);
+  background: linear-gradient(59deg, #151f25, #24301b);
+  color: white;
+  position: inherit;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-size : 14px;
+}
+
+
+.navbar-brand {
+  font-family: 'Rock Salt' !important;
+  color: #ffffff !important;
+  font-size: 25px;
+}
+
+.logInOut-btn {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  background-color: #24301b !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+}
+

@@ -1,0 +1,52 @@
+<div>
+  <div class="table-responsive">
+
+    <table class="table table-bordered table-hover">
+      <thead class='thead'>
+      <tr>
+        <th>S.No</th>
+        <th>Image</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Colour</th>
+<!--        <th>Total Price</th>-->
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cartList of cartItems;index as i">
+        <td>{{i}}</td>
+        <td>
+          <img
+            class="img-thumbnail .img-responsive"
+            src="{{cartList.mainImage}}"
+            style="height:80px;width:80px;"
+          />
+        </td>
+
+        <td>{{cartList.id}}</td>
+        <td>{{cartList.name}}</td>
+        <td>{{cartList.price.amount | currency: 'GBP'}}</td>
+        <td>{{cartList.colour}}</td>
+<!--        <td>{{cartList.product_price * cartList.product_quanity}}</td>-->
+        <td>
+          <button
+            class="btn btn-danger"
+
+          >
+            Remove Item From Cart
+          </button>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="3"></td>
+        <td colspan="2">Total Price {{totalPrice | currency: 'GBP' }}</td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+

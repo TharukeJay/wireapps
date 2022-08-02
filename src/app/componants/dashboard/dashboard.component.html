@@ -1,0 +1,13 @@
+<mat-grid-list cols="2" rowHeight="80em" class="container-lgn">
+  <mat-grid-tile *ngFor="let product of products" class="my-grid-tile">
+    <div class="card">
+      <img src="{{product.mainImage}}" class="card-img-top" alt="Fissure in Sandstone" />
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text card-para">{{product.description}}</p>
+        <button mat-button (click)="(openDetailPage(product))">View Item</button>
+        <button mat-button (click)="(addToCard(product))">Add to cart</button>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,23 @@
+<div class="login-content container-lgn">
+  <div class="container">
+    <h3 class="login-heading">User Login</h3>
+    <hr>
+
+    <label for="user"></label>
+    <input #username id="user" class="form-control" name="user" type="text" placeholder="Username *" required/>
+
+<!--    <label for="pass"></label>-->
+<!--    <input #password id="pass" class="form-control" name="pass" type="password"  (keypress)="(loginEnterKey($event,username.value,password.value))"  placeholder="Password *" required/>-->
+
+    <button class="registerbtn"
+            (click)="(login(username.value))">Login
+    </button>
+<!--    <div class="container signin">-->
+<!--      <p><a routerLink="/password_reset" class="ForgetPwd">Forgot Password?</a></p>-->
+<!--      <p>Need to create an account ?  <a routerLink="/signup">Create account</a></p>-->
+<!--    </div>-->
+  </div>
+
+</div>
+
+<!--<app-footer></app-footer>-->

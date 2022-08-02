@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark primary-color navbar-background">
+
+  <a routerLink=""><img src="../assets/logo.png" width="60px"/>&nbsp;</a>
+  <a class="navbar-brand navbar-title" routerLink="">Wireapps</a>
+  <span class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+</span>
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      </li>
+    </ul>
+
+    <div class="form-inline">
+      <div class="md-form my-0">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+                        <span *ngIf="loggedOrNot"
+                              [ngClass]="'visibleStyle ' +'button alt btn-margin nav-link' "
+                        >
+                         Logged in as {{loggedUser}}
+                        </span>
+          </li>
+          <li class="nav-item">
+                        <a *ngIf="loggedOrNot"
+                              [ngClass]="'visibleStyle ' +'button alt btn-margin nav-link' "
+                           routerLink="/cart"
+                        >
+                         My cart
+                        </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="button alt btn-margin nav-link logInOut-btn"
+               (click)="(logInOutUser())"
+            >{{logInOut}}
+            </a>
+          </li>
+          <li *ngIf="!loggedOrNot" class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</nav>
